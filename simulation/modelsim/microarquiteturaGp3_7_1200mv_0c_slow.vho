@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 32-bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "07/31/2019 10:17:34"
+-- DATE "08/22/2019 08:29:00"
 
 -- 
 -- Device: Altera EP4CE30F23C7 Package FBGA484
@@ -2692,22 +2692,39 @@ SIGNAL \rs232_0|RS232_Out_Serializer|serial_data_out~0_combout\ : std_logic;
 SIGNAL \rs232_0|RS232_Out_Serializer|serial_data_out~q\ : std_logic;
 SIGNAL \altera_reserved_tms~input_o\ : std_logic;
 SIGNAL \altera_internal_jtag~TDO\ : std_logic;
+SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \cmd_xbar_mux_001|src_data\ : std_logic_vector(86 DOWNTO 0);
+SIGNAL \cmd_xbar_mux_001|arb|top_priority_reg\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \cmd_xbar_mux_003|arb|top_priority_reg\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \cmd_xbar_mux_004|src_data\ : std_logic_vector(86 DOWNTO 0);
 SIGNAL \cmd_xbar_mux_005|saved_grant\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \cmd_xbar_mux_006|src_data\ : std_logic_vector(86 DOWNTO 0);
 SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_jtag_debug_module_wrapper|the_microarquiteturaGp3_nios2_qsys_0_jtag_debug_module_sysclk|the_altera_std_synchronizer3|dreg\ : std_logic_vector(0 DOWNTO 0);
+SIGNAL \jtag_uart_0|the_microarquiteturaGp3_jtag_uart_0_scfifo_r|rfifo|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit\ : std_logic_vector(5 DOWNTO 0);
+SIGNAL \jtag_uart_0|the_microarquiteturaGp3_jtag_uart_0_scfifo_r|rfifo|auto_generated|dpfifo|wr_ptr|counter_reg_bit\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \rs232_0|RS232_Out_Serializer|RS232_Out_Counters|bit_counter\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \leds_rows_s1_translator|wait_latency_counter\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem_used\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \jtag_uart_0_avalon_jtag_slave_translator_avalon_universal_slave_0_agent_rsp_fifo|mem_used\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \leds_rows_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem_used\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \nios2_qsys_0|microarquiteturaGp3_nios2_qsys_0_register_bank_b|the_altsyncram|auto_generated|q_b\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|address\ : std_logic_vector(8 DOWNTO 0);
 SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci_debug|the_altera_std_synchronizer|dreg\ : std_logic_vector(0 DOWNTO 0);
 SIGNAL \nios2_qsys_0|W_ienable_reg\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \nios2_qsys_0|R_compare_op\ : std_logic_vector(1 DOWNTO 0);
+SIGNAL \nios2_qsys_0|D_iw\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \buttons|readdata\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_nios2_ocimem|MonDReg\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_nios2_ocimem|microarquiteturaGp3_nios2_qsys_0_ociram_sp_ram|the_altsyncram|auto_generated|q_a\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_nios2_avalon_reg|oci_ienable\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \onchip_memory2_0_s1_translator|read_latency_shift_reg\ : std_logic_vector(0 DOWNTO 0);
+SIGNAL \jtag_uart_0_avalon_jtag_slave_translator|av_readdata_pre\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \rst_controller|r_sync_rst_chain\ : std_logic_vector(1 DOWNTO 0);
 SIGNAL \jtag_uart_0|av_readdata\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \jtag_uart_0|microarquiteturaGp3_jtag_uart_0_alt_jtag_atlantic|wdata\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \rs232_0|RS232_In_Deserializer|RS232_In_Counters|baud_counter\ : std_logic_vector(8 DOWNTO 0);
 SIGNAL \rs232_0|RS232_In_Deserializer|RS232_In_FIFO|Sync_FIFO|auto_generated|dpfifo|FIFOram|q_b\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \rs232_0|RS232_In_Deserializer|RS232_In_FIFO|Sync_FIFO|auto_generated|dpfifo|rd_ptr_msb|counter_reg_bit\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|jtag_ir_reg\ : std_logic_vector(9 DOWNTO 0);
 SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|identity_contrib_shift_reg\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|shadow_jsm|state\ : std_logic_vector(15 DOWNTO 0);
@@ -2814,23 +2831,6 @@ SIGNAL \jtag_uart_0|microarquiteturaGp3_jtag_uart_0_alt_jtag_atlantic|td_shift\ 
 SIGNAL \lcd_custom_instruction_0|result\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \rs232_0|readdata\ : std_logic_vector(31 DOWNTO 0);
 SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|irsr_reg\ : std_logic_vector(6 DOWNTO 0);
-SIGNAL \auto_hub|jtag_hub_gen:sld_jtag_hub_inst|hub_mode_reg\ : std_logic_vector(2 DOWNTO 0);
-SIGNAL \cmd_xbar_mux_001|arb|top_priority_reg\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \cmd_xbar_mux_004|src_data\ : std_logic_vector(86 DOWNTO 0);
-SIGNAL \cmd_xbar_mux_006|src_data\ : std_logic_vector(86 DOWNTO 0);
-SIGNAL \jtag_uart_0|the_microarquiteturaGp3_jtag_uart_0_scfifo_r|rfifo|auto_generated|dpfifo|fifo_state|count_usedw|counter_reg_bit\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \jtag_uart_0|the_microarquiteturaGp3_jtag_uart_0_scfifo_r|rfifo|auto_generated|dpfifo|wr_ptr|counter_reg_bit\ : std_logic_vector(5 DOWNTO 0);
-SIGNAL \onchip_memory2_0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem_used\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \leds_rows_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem_used\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \nios2_qsys_0|microarquiteturaGp3_nios2_qsys_0_register_bank_b|the_altsyncram|auto_generated|q_b\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \nios2_qsys_0|D_iw\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_nios2_ocimem|microarquiteturaGp3_nios2_qsys_0_ociram_sp_ram|the_altsyncram|auto_generated|q_a\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \nios2_qsys_0|the_microarquiteturaGp3_nios2_qsys_0_nios2_oci|the_microarquiteturaGp3_nios2_qsys_0_nios2_avalon_reg|oci_ienable\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \jtag_uart_0_avalon_jtag_slave_translator|av_readdata_pre\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \rst_controller|r_sync_rst_chain\ : std_logic_vector(1 DOWNTO 0);
-SIGNAL \jtag_uart_0|microarquiteturaGp3_jtag_uart_0_alt_jtag_atlantic|wdata\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \rs232_0|RS232_In_Deserializer|RS232_In_Counters|baud_counter\ : std_logic_vector(8 DOWNTO 0);
-SIGNAL \rs232_0|RS232_In_Deserializer|RS232_In_FIFO|Sync_FIFO|auto_generated|dpfifo|rd_ptr_msb|counter_reg_bit\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \rst_controller|ALT_INV_r_sync_rst~clkctrl_outclk\ : std_logic;
 SIGNAL \rst_controller|ALT_INV_merged_reset~0clkctrl_outclk\ : std_logic;
 SIGNAL \ALT_INV_altera_internal_jtag~TCKUTAPclkctrl_outclk\ : std_logic;
