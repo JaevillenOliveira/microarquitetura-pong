@@ -1,0 +1,272 @@
+IP Upgrade report for microarquiteturaGp3
+Wed Sep 04 23:57:45 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Failed Upgrade IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Wed Sep 04 23:57:45 2019           ;
+; Quartus Prime Version        ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                ; microarquiteturaGp3                         ;
+; Top-level Entity Name        ; microarquiteturaGp3                         ;
+; Family                       ; Cyclone IV E                                ;
++------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Failed Upgrade IP Components                                                                                                                                                                                            ;
++---------------------+----------------+---------+-------------------------------------------------------+--------------------------+-----------------+-------------------------------------------------------------------+
+; Entity Name         ; Component Name ; Version ; Original Source File                                  ; Generation File Path     ; New Source File ; Message                                                           ;
++---------------------+----------------+---------+-------------------------------------------------------+--------------------------+-----------------+-------------------------------------------------------------------+
+; microarquiteturaGp3 ; Qsys           ; 13.0sp1 ; microarquiteturaGp3/synthesis/microarquiteturaGp3.qip ; microarquiteturaGp3.qsys ;                 ; Error upgrading Platform Designer file "microarquiteturaGp3.qsys" ;
++---------------------+----------------+---------+-------------------------------------------------------+--------------------------+-----------------+-------------------------------------------------------------------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "microarquiteturaGp3.qsys" to "microarquiteturaGp3.BAK.qsys"
+Info (11902): Backing up file "microarquiteturaGp3/synthesis/microarquiteturaGp3.v" to "microarquiteturaGp3.BAK.v"
+Info (11837): Started upgrading IP component Qsys with file "microarquiteturaGp3.qsys"
+Info: 2019.09.04.23:55:47 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2019.09.04.23:55:47 Info: Upgrading from core type Nios II (Classic) Processor with version 13.0 to core type Nios II Processor with version 18.1
+Info: 2019.09.04.23:55:49 Info: Migration Successful
+Info: 2019.09.04.23:55:49 Info: Finished upgrading the ip cores
+Info: 2019.09.04.23:56:28 Info: Saving generation log to C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3
+Info: 2019.09.04.23:56:28 Info: Starting: Create simulation model
+Info: 2019.09.04.23:56:28 Info: qsys-generate C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3\simulation --family="Cyclone IV E" --part=EP4CE30F23C7
+Info: 2019.09.04.23:56:28 Info: Loading problema3Gp3
+Info: 2019.09.04.23:56:29 Info: Reading input file
+Info: 2019.09.04.23:56:29 Info: Adding LCD_Custom_instruction_0 [LCD_Custom_instruction 1.0]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module LCD_Custom_instruction_0
+Info: 2019.09.04.23:56:29 Info: Adding buttons [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module buttons
+Info: 2019.09.04.23:56:29 Info: Adding clk_0 [clock_source 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module clk_0
+Info: 2019.09.04.23:56:29 Info: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module jtag_uart_0
+Info: 2019.09.04.23:56:29 Info: Adding leds_columns [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module leds_columns
+Info: 2019.09.04.23:56:29 Info: Adding leds_rows [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module leds_rows
+Info: 2019.09.04.23:56:29 Info: Adding nios2_qsys_0 [altera_nios2_gen2 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module nios2_qsys_0
+Info: 2019.09.04.23:56:29 Info: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module onchip_memory2_0
+Info: 2019.09.04.23:56:29 Info: Adding rs232_0 [altera_up_avalon_rs232 17.1]
+Info: 2019.09.04.23:56:29 Info: Parameterizing module rs232_0
+Info: 2019.09.04.23:56:29 Info: Adding uart_rx_0 [uart_rx 1.0]
+Warning: 2019.09.04.23:56:29 Warning: uart_rx_0: Component type uart_rx is not in the library
+Info: 2019.09.04.23:56:29 Info: Parameterizing module uart_rx_0
+Info: 2019.09.04.23:56:29 Info: Adding uart_tx_0 [uart_tx 1.0]
+Warning: 2019.09.04.23:56:29 Warning: uart_tx_0: Component type uart_tx is not in the library
+Info: 2019.09.04.23:56:29 Info: Parameterizing module uart_tx_0
+Info: 2019.09.04.23:56:29 Info: Building connections
+Info: 2019.09.04.23:56:29 Info: Parameterizing connections
+Info: 2019.09.04.23:56:29 Info: Validating
+Info: 2019.09.04.23:56:30 Info: Done reading input file
+Info: 2019.09.04.23:56:32 Info: microarquiteturaGp3.buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2019.09.04.23:56:32 Info: microarquiteturaGp3.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Error: 2019.09.04.23:56:32 Error: microarquiteturaGp3.rs232_0: rs232_0.clk must be connected to a clock output
+Error: 2019.09.04.23:56:32 Error: microarquiteturaGp3.rs232_0: rs232_0.reset must be connected to a reset source
+Info: 2019.09.04.23:56:34 Info: microarquiteturaGp3: Generating microarquiteturaGp3 "microarquiteturaGp3" for SIM_VERILOG
+Error: 2019.09.04.23:56:42 Error: rs232_0_avalon_rs232_slave_translator.avalon_anti_slave_0: Cannot connect rs232_0_avalon_rs232_slave_translator.reset because rs232_0.reset is not connected. If rs232_0.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Info: 2019.09.04.23:56:46 Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: 2019.09.04.23:56:46 Info: Inserting clock-crossing logic between cmd_demux_001.src1 and cmd_mux_001.sink1
+Info: 2019.09.04.23:56:46 Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: 2019.09.04.23:56:46 Info: Inserting clock-crossing logic between rsp_demux_001.src1 and rsp_mux_001.sink1
+Warning: 2019.09.04.23:56:53 Warning: microarquiteturaGp3: "No matching role found for clk_0:clk:clk_out (clk)"
+Warning: 2019.09.04.23:56:53 Warning: microarquiteturaGp3: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2019.09.04.23:56:53 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0:debug_reset_request:debug_reset_request (reset)"
+Warning: 2019.09.04.23:56:53 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: 2019.09.04.23:56:53 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Info: com.altera.hdlwriter.EntityWritingException: Connection  is not connected nios2_qsys_0:data_master -> ?
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.addConnection(OldEntityWriterInternal.java:438)
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.writeHDLInternal(OldEntityWriterInternal.java:122)
+Info:     at com.altera.hdlwriter.internal.EntityWriter.writeHDL(EntityWriter.java:40)
+Info:     at com.altera.sopc.generator.EnsembleGenerationFileSet2.generate(EnsembleGenerationFileSet2.java:61)
+Info:     at com.altera.sopc.generator.FileSet2.generate(FileSet2.java:150)
+Info:     at com.altera.sopc.generator.Sellafield.generate(Sellafield.java:366)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.performGeneration(SbGenerate.java:521)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.act(SbGenerate.java:467)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:730)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generateSimulation(QsysGenerationTask.java:503)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generate(QsysGenerationTask.java:291)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.run(QsysGenerationTask.java:127)
+Info:     at com.altera.qsys.generate.QsysGenerate.createGenerationTaskOuter(QsysGenerate.java:699)
+Info:     at com.altera.qsys.generate.QsysGenerate.runGenerationFlow(QsysGenerate.java:628)
+Info:     at com.altera.qsys.generate.QsysGenerate.act(QsysGenerate.java:389)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.qsys.generate.QsysGenerate.main(QsysGenerate.java:180)
+Info: 2019.09.04.23:56:53 Info: microarquiteturaGp3: Done "microarquiteturaGp3" with 1 modules, 0 files
+Error: 2019.09.04.23:56:54 Error: qsys-generate failed with exit code 1: 8 Errors, 7 Warnings
+Info: 2019.09.04.23:56:54 Info: Finished: Create simulation model
+Info: 2019.09.04.23:56:54 Info: Starting: Create Modelsim Project.
+Info: 2019.09.04.23:56:54 Info: sim-script-gen --spd=C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3\microarquiteturaGp3.spd --output-directory=C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:56:54 Info: Doing: ip-make-simscript --spd=C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3\microarquiteturaGp3.spd --output-directory=C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info: Generating the following file(s) for MODELSIM simulator in C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info:     mentor
+Info: 2019.09.04.23:57:18 Info: Generating the following file(s) for VCS simulator in C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info:     synopsys/vcs
+Info: 2019.09.04.23:57:18 Info: Generating the following file(s) for VCSMX simulator in C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info:     synopsys/vcsmx
+Info: 2019.09.04.23:57:18 Info:     synopsys/vcsmx
+Info: 2019.09.04.23:57:18 Info: Generating the following file(s) for NCSIM simulator in C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info:     cadence
+Info: 2019.09.04.23:57:18 Info:     cadence
+Info: 2019.09.04.23:57:18 Info:     cadence
+Info: 2019.09.04.23:57:18 Info: Generating the following file(s) for RIVIERA simulator in C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info:     aldec
+Info: 2019.09.04.23:57:18 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/Jaevillen/Desktop/problema3Gp3/microarquiteturaGp3/simulation
+Info: 2019.09.04.23:57:18 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2019.09.04.23:57:18 Info: Finished: Create Modelsim Project.
+Info: 2019.09.04.23:57:18 Info: Starting: Create block symbol file (.bsf)
+Info: 2019.09.04.23:57:18 Info: qsys-generate C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3.qsys --block-symbol-file --output-directory=C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3 --family="Cyclone IV E" --part=EP4CE30F23C7
+Info: 2019.09.04.23:57:18 Info: Loading problema3Gp3
+Info: 2019.09.04.23:57:19 Info: Reading input file
+Info: 2019.09.04.23:57:19 Info: Adding LCD_Custom_instruction_0 [LCD_Custom_instruction 1.0]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module LCD_Custom_instruction_0
+Info: 2019.09.04.23:57:19 Info: Adding buttons [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module buttons
+Info: 2019.09.04.23:57:19 Info: Adding clk_0 [clock_source 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module clk_0
+Info: 2019.09.04.23:57:19 Info: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module jtag_uart_0
+Info: 2019.09.04.23:57:19 Info: Adding leds_columns [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module leds_columns
+Info: 2019.09.04.23:57:19 Info: Adding leds_rows [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module leds_rows
+Info: 2019.09.04.23:57:19 Info: Adding nios2_qsys_0 [altera_nios2_gen2 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module nios2_qsys_0
+Info: 2019.09.04.23:57:19 Info: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module onchip_memory2_0
+Info: 2019.09.04.23:57:19 Info: Adding rs232_0 [altera_up_avalon_rs232 17.1]
+Info: 2019.09.04.23:57:19 Info: Parameterizing module rs232_0
+Info: 2019.09.04.23:57:19 Info: Adding uart_rx_0 [uart_rx 1.0]
+Warning: 2019.09.04.23:57:19 Warning: uart_rx_0: Component type uart_rx is not in the library
+Info: 2019.09.04.23:57:19 Info: Parameterizing module uart_rx_0
+Info: 2019.09.04.23:57:19 Info: Adding uart_tx_0 [uart_tx 1.0]
+Warning: 2019.09.04.23:57:19 Warning: uart_tx_0: Component type uart_tx is not in the library
+Info: 2019.09.04.23:57:19 Info: Parameterizing module uart_tx_0
+Info: 2019.09.04.23:57:19 Info: Building connections
+Info: 2019.09.04.23:57:19 Info: Parameterizing connections
+Info: 2019.09.04.23:57:19 Info: Validating
+Info: 2019.09.04.23:57:20 Info: Done reading input file
+Info: 2019.09.04.23:57:22 Info: microarquiteturaGp3.buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2019.09.04.23:57:22 Info: microarquiteturaGp3.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Error: 2019.09.04.23:57:22 Error: microarquiteturaGp3.rs232_0: rs232_0.clk must be connected to a clock output
+Error: 2019.09.04.23:57:22 Error: microarquiteturaGp3.rs232_0: rs232_0.reset must be connected to a reset source
+Info: 2019.09.04.23:57:34 Info: qsys-generate succeeded.
+Info: 2019.09.04.23:57:34 Info: Finished: Create block symbol file (.bsf)
+Info: 2019.09.04.23:57:34 Info:
+Info: 2019.09.04.23:57:34 Info: Starting: Create HDL design files for synthesis
+Info: 2019.09.04.23:57:34 Info: qsys-generate C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3.qsys --synthesis=VERILOG --output-directory=C:\Users\Jaevillen\Desktop\problema3Gp3\microarquiteturaGp3\synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
+Info: 2019.09.04.23:57:34 Info: Loading problema3Gp3
+Info: 2019.09.04.23:57:35 Info: Reading input file
+Info: 2019.09.04.23:57:35 Info: Adding LCD_Custom_instruction_0 [LCD_Custom_instruction 1.0]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module LCD_Custom_instruction_0
+Info: 2019.09.04.23:57:35 Info: Adding buttons [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module buttons
+Info: 2019.09.04.23:57:35 Info: Adding clk_0 [clock_source 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module clk_0
+Info: 2019.09.04.23:57:35 Info: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module jtag_uart_0
+Info: 2019.09.04.23:57:35 Info: Adding leds_columns [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module leds_columns
+Info: 2019.09.04.23:57:35 Info: Adding leds_rows [altera_avalon_pio 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module leds_rows
+Info: 2019.09.04.23:57:35 Info: Adding nios2_qsys_0 [altera_nios2_gen2 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module nios2_qsys_0
+Info: 2019.09.04.23:57:35 Info: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module onchip_memory2_0
+Info: 2019.09.04.23:57:35 Info: Adding rs232_0 [altera_up_avalon_rs232 17.1]
+Info: 2019.09.04.23:57:35 Info: Parameterizing module rs232_0
+Info: 2019.09.04.23:57:35 Info: Adding uart_rx_0 [uart_rx 1.0]
+Warning: 2019.09.04.23:57:35 Warning: uart_rx_0: Component type uart_rx is not in the library
+Info: 2019.09.04.23:57:35 Info: Parameterizing module uart_rx_0
+Info: 2019.09.04.23:57:35 Info: Adding uart_tx_0 [uart_tx 1.0]
+Warning: 2019.09.04.23:57:35 Warning: uart_tx_0: Component type uart_tx is not in the library
+Info: 2019.09.04.23:57:35 Info: Parameterizing module uart_tx_0
+Info: 2019.09.04.23:57:35 Info: Building connections
+Info: 2019.09.04.23:57:35 Info: Parameterizing connections
+Info: 2019.09.04.23:57:35 Info: Validating
+Info: 2019.09.04.23:57:36 Info: Done reading input file
+Info: 2019.09.04.23:57:37 Info: microarquiteturaGp3.buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: 2019.09.04.23:57:37 Info: microarquiteturaGp3.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Error: 2019.09.04.23:57:37 Error: microarquiteturaGp3.rs232_0: rs232_0.clk must be connected to a clock output
+Error: 2019.09.04.23:57:37 Error: microarquiteturaGp3.rs232_0: rs232_0.reset must be connected to a reset source
+Info: 2019.09.04.23:57:38 Info: microarquiteturaGp3: Generating microarquiteturaGp3 "microarquiteturaGp3" for QUARTUS_SYNTH
+Error: 2019.09.04.23:57:39 Error: rs232_0_avalon_rs232_slave_translator.avalon_anti_slave_0: Cannot connect rs232_0_avalon_rs232_slave_translator.reset because rs232_0.reset is not connected. If rs232_0.reset is exported, connect it to a reset bridge and export the bridge's reset input instead.
+Info: 2019.09.04.23:57:40 Info: Inserting clock-crossing logic between cmd_demux.src1 and cmd_mux_001.sink0
+Info: 2019.09.04.23:57:40 Info: Inserting clock-crossing logic between cmd_demux_001.src1 and cmd_mux_001.sink1
+Info: 2019.09.04.23:57:40 Info: Inserting clock-crossing logic between rsp_demux_001.src0 and rsp_mux.sink1
+Info: 2019.09.04.23:57:40 Info: Inserting clock-crossing logic between rsp_demux_001.src1 and rsp_mux_001.sink1
+Warning: 2019.09.04.23:57:43 Warning: microarquiteturaGp3: "No matching role found for clk_0:clk:clk_out (clk)"
+Warning: 2019.09.04.23:57:43 Warning: microarquiteturaGp3: "No matching role found for clk_0:clk_reset:reset_n_out (reset)"
+Warning: 2019.09.04.23:57:43 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0:debug_reset_request:debug_reset_request (reset)"
+Warning: 2019.09.04.23:57:43 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
+Warning: 2019.09.04.23:57:43 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
+Info: com.altera.hdlwriter.EntityWritingException: Connection  is not connected nios2_qsys_0:data_master -> ?
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.addConnection(OldEntityWriterInternal.java:438)
+Info:     at com.altera.hdlwriter.internal.OldEntityWriterInternal.writeHDLInternal(OldEntityWriterInternal.java:122)
+Info:     at com.altera.hdlwriter.internal.EntityWriter.writeHDL(EntityWriter.java:40)
+Info:     at com.altera.sopc.generator.EnsembleGenerationFileSet2.generate(EnsembleGenerationFileSet2.java:61)
+Info:     at com.altera.sopc.generator.FileSet2.generate(FileSet2.java:150)
+Info:     at com.altera.sopc.generator.Sellafield.generate(Sellafield.java:366)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.performGeneration(SbGenerate.java:521)
+Info:     at com.altera.sopcmodel.sbtools.sbgenerate.SbGenerate.act(SbGenerate.java:467)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:730)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generateSynthesis(QsysGenerationTask.java:597)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.generate(QsysGenerationTask.java:374)
+Info:     at com.altera.sopceditor.tools.generation.QsysGenerationTask.run(QsysGenerationTask.java:127)
+Info:     at com.altera.qsys.generate.QsysGenerate.createGenerationTaskOuter(QsysGenerate.java:699)
+Info:     at com.altera.qsys.generate.QsysGenerate.runGenerationFlow(QsysGenerate.java:628)
+Info:     at com.altera.qsys.generate.QsysGenerate.act(QsysGenerate.java:389)
+Info:     at com.altera.utilities.AltCmdLineToolBase.runTheTool(AltCmdLineToolBase.java:718)
+Info:     at com.altera.qsys.generate.QsysGenerate.main(QsysGenerate.java:180)
+Info: 2019.09.04.23:57:43 Info: microarquiteturaGp3: Done "microarquiteturaGp3" with 1 modules, 0 files
+Error: 2019.09.04.23:57:44 Error: qsys-generate failed with exit code 1: 8 Errors, 7 Warnings
+Info: 2019.09.04.23:57:44 Info: Finished: Create HDL design files for synthesis
+Info (11904): Restoring file "microarquiteturaGp3.BAK.qsys" to "microarquiteturaGp3.qsys"
+Error (14923): Error upgrading Platform Designer file "microarquiteturaGp3.qsys"
+Error (11890): Unable to automatically upgrade Platform Designer component. Please manually upgrade "microarquiteturaGp3.qsys" in Platform Designer
+Error (23031): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 28 errors, 16 warnings
+    Error: Peak virtual memory: 4959 megabytes
+    Error: Processing ended: Wed Sep 04 23:57:46 2019
+    Error: Elapsed time: 00:04:39
+    Error: Total CPU time (on all processors): 00:03:02
+
+

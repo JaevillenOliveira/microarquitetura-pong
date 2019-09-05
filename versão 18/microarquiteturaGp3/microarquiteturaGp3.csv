@@ -1,0 +1,15 @@
+# system info microarquiteturaGp3 on 2019.09.04.23:56:54
+system_info:
+name,value
+DEVICE,EP4CE30F23C7
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1567652191
+#
+#
+# Files generated for microarquiteturaGp3 on 2019.09.04.23:56:54
+files:
+filepath,kind,attributes,module,is_top
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
