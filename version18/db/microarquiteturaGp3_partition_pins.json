@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "lcd_register_select",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_enable_op",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lcd_data_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_vsync",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_hsync",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

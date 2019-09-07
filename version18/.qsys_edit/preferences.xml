@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="143" />
+   <irq preferredWidth="34" />
+   <inputclock preferredWidth="114" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="272" />
+   <clocksource preferredWidth="271" />
+   <frequency preferredWidth="256" />
+  </columns>
+ </clocktable>
+ <library expandedCategories="Library,Project" />
+ <window width="1100" height="728" x="266" y="0" />
+ <hdlexample language="VERILOG" />
+ <generation
+   path="C:/Users/carlo/OneDrive/&#193;rea de Trabalho/microarquitetura-pong-master/vers&#227;o 18" />
+</preferences>
