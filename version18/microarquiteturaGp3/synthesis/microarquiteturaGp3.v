@@ -4,18 +4,27 @@
 
 `timescale 1 ps / 1 ps
 module microarquiteturaGp3 (
-		input  wire [3:0] buttons_export,      //     buttons.export
-		input  wire       clk_clk,             //         clk.clk
-		output wire       lcd_read_write,      //         lcd.read_write
-		output wire       lcd_register_select, //            .register_select
-		output wire       lcd_enable_op,       //            .enable_op
-		output wire [7:0] lcd_data_out,        //            .data_out
-		input  wire       reset_reset_n,       //       reset.reset_n
-		output wire       vga_monitor_vsync,   // vga_monitor.vsync
-		output wire [3:0] vga_monitor_r,       //            .r
-		output wire [3:0] vga_monitor_g,       //            .g
-		output wire [3:0] vga_monitor_b,       //            .b
-		output wire       vga_monitor_hsync    //            .hsync
+		input  wire       buttons_export,          //     buttons.export
+		input  wire       clk_clk,                 //         clk.clk
+		output wire       lcd_read_write,          //         lcd.read_write
+		output wire       lcd_register_select,     //            .register_select
+		output wire       lcd_enable_op,           //            .enable_op
+		output wire [7:0] lcd_data_out,            //            .data_out
+		input  wire [2:0] player_1_export,         //    player_1.export
+		input  wire [2:0] player_2_export,         //    player_2.export
+		input  wire       reset_reset_n,           //       reset.reset_n
+		output wire       vga_monitor_vsync,       // vga_monitor.vsync
+		output wire [3:0] vga_monitor_r,           //            .r
+		output wire [3:0] vga_monitor_g,           //            .g
+		output wire [3:0] vga_monitor_b,           //            .b
+		output wire       vga_monitor_hsync,       //            .hsync
+		output wire [2:0] vga_monitor_score_p1,    //            .score_p1
+		output wire [2:0] vga_monitor_score_p2,    //            .score_p2
+		input  wire       vga_monitor_game_button, //            .game_button
+		input  wire       vga_monitor_up_left,     //            .up_left
+		input  wire       vga_monitor_up_right,    //            .up_right
+		input  wire       vga_monitor_down_left,   //            .down_left
+		input  wire       vga_monitor_down_right   //            .down_right
 	);
 
 	wire         nios2_qsys_0_custom_instruction_master_readra;                                   // nios2_qsys_0:D_ci_readra -> nios2_qsys_0_custom_instruction_master_translator:ci_slave_readra
@@ -114,9 +123,13 @@ module microarquiteturaGp3 (
 	wire         mm_interconnect_0_onchip_memory2_0_s1_clken;                                     // mm_interconnect_0:onchip_memory2_0_s1_clken -> onchip_memory2_0:clken
 	wire  [31:0] mm_interconnect_0_buttons_s1_readdata;                                           // buttons:readdata -> mm_interconnect_0:buttons_s1_readdata
 	wire   [1:0] mm_interconnect_0_buttons_s1_address;                                            // mm_interconnect_0:buttons_s1_address -> buttons:address
+	wire  [31:0] mm_interconnect_0_player_1_s1_readdata;                                          // player_1:readdata -> mm_interconnect_0:player_1_s1_readdata
+	wire   [1:0] mm_interconnect_0_player_1_s1_address;                                           // mm_interconnect_0:player_1_s1_address -> player_1:address
+	wire  [31:0] mm_interconnect_0_player_2_s1_readdata;                                          // player_2:readdata -> mm_interconnect_0:player_2_s1_readdata
+	wire   [1:0] mm_interconnect_0_player_2_s1_address;                                           // mm_interconnect_0:player_2_s1_address -> player_2:address
 	wire         irq_mapper_receiver0_irq;                                                        // jtag_uart_0:av_irq -> irq_mapper:receiver0_irq
 	wire  [31:0] nios2_qsys_0_irq_irq;                                                            // irq_mapper:sender_irq -> nios2_qsys_0:irq
-	wire         rst_controller_reset_out_reset;                                                  // rst_controller:reset_out -> [buttons:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:nios2_qsys_0_reset_reset_bridge_in_reset_reset, nios2_qsys_0:reset_n, onchip_memory2_0:reset, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                                                  // rst_controller:reset_out -> [buttons:reset_n, irq_mapper:reset, jtag_uart_0:rst_n, mm_interconnect_0:nios2_qsys_0_reset_reset_bridge_in_reset_reset, nios2_qsys_0:reset_n, onchip_memory2_0:reset, player_1:reset_n, player_2:reset_n, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                                              // rst_controller:reset_req -> [nios2_qsys_0:reset_req, onchip_memory2_0:reset_req, rst_translator:reset_req_in]
 	wire         nios2_qsys_0_debug_reset_request_reset;                                          // nios2_qsys_0:debug_reset_request -> rst_controller:reset_in1
 
@@ -220,13 +233,36 @@ module microarquiteturaGp3 (
 		.freeze     (1'b0)                                              // (terminated)
 	);
 
+	microarquiteturaGp3_player_1 player_1 (
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_0_player_1_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_player_1_s1_readdata), //                    .readdata
+		.in_port  (player_1_export)                         // external_connection.export
+	);
+
+	microarquiteturaGp3_player_1 player_2 (
+		.clk      (clk_clk),                                //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_0_player_2_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_player_2_s1_readdata), //                    .readdata
+		.in_port  (player_2_export)                         // external_connection.export
+	);
+
 	vga_monitor vga_monitor_0 (
-		.VSync (vga_monitor_vsync), // conduit_end.vsync
-		.R     (vga_monitor_r),     //            .r
-		.G     (vga_monitor_g),     //            .g
-		.B     (vga_monitor_b),     //            .b
-		.HSync (vga_monitor_hsync), //            .hsync
-		.Clock (clk_clk)            //       clock.clk
+		.VSync          (vga_monitor_vsync),       // conduit_end.vsync
+		.R              (vga_monitor_r),           //            .r
+		.G              (vga_monitor_g),           //            .g
+		.B              (vga_monitor_b),           //            .b
+		.HSync          (vga_monitor_hsync),       //            .hsync
+		.score_p1       (vga_monitor_score_p1),    //            .score_p1
+		.score_p2       (vga_monitor_score_p2),    //            .score_p2
+		.button_game    (vga_monitor_game_button), //            .game_button
+		.up_left_bar    (vga_monitor_up_left),     //            .up_left
+		.up_right_bar   (vga_monitor_up_right),    //            .up_right
+		.down_left_bar  (vga_monitor_down_left),   //            .down_left
+		.down_right_bar (vga_monitor_down_right),  //            .down_right
+		.Clock          (clk_clk)                  //       clock.clk
 	);
 
 	altera_customins_master_translator #(
@@ -410,7 +446,11 @@ module microarquiteturaGp3 (
 		.onchip_memory2_0_s1_writedata                  (mm_interconnect_0_onchip_memory2_0_s1_writedata),             //                                         .writedata
 		.onchip_memory2_0_s1_byteenable                 (mm_interconnect_0_onchip_memory2_0_s1_byteenable),            //                                         .byteenable
 		.onchip_memory2_0_s1_chipselect                 (mm_interconnect_0_onchip_memory2_0_s1_chipselect),            //                                         .chipselect
-		.onchip_memory2_0_s1_clken                      (mm_interconnect_0_onchip_memory2_0_s1_clken)                  //                                         .clken
+		.onchip_memory2_0_s1_clken                      (mm_interconnect_0_onchip_memory2_0_s1_clken),                 //                                         .clken
+		.player_1_s1_address                            (mm_interconnect_0_player_1_s1_address),                       //                              player_1_s1.address
+		.player_1_s1_readdata                           (mm_interconnect_0_player_1_s1_readdata),                      //                                         .readdata
+		.player_2_s1_address                            (mm_interconnect_0_player_2_s1_address),                       //                              player_2_s1.address
+		.player_2_s1_readdata                           (mm_interconnect_0_player_2_s1_readdata)                       //                                         .readdata
 	);
 
 	microarquiteturaGp3_irq_mapper irq_mapper (

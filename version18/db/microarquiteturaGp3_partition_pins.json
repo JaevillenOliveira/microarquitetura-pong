@@ -100,23 +100,79 @@
 					"strict" : false
 				},
 				{
+					"name" : "vga_monitor_score_p1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_score_p1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_score_p1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_score_p2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_score_p2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_score_p2[2]",
+					"strict" : false
+				},
+				{
 					"name" : "clk_clk",
 					"strict" : false
 				},
 				{
-					"name" : "buttons_export[0]",
+					"name" : "vga_monitor_game_button",
 					"strict" : false
 				},
 				{
-					"name" : "buttons_export[1]",
+					"name" : "vga_monitor_up_left",
 					"strict" : false
 				},
 				{
-					"name" : "buttons_export[2]",
+					"name" : "vga_monitor_down_left",
 					"strict" : false
 				},
 				{
-					"name" : "buttons_export[3]",
+					"name" : "vga_monitor_up_right",
+					"strict" : false
+				},
+				{
+					"name" : "vga_monitor_down_right",
+					"strict" : false
+				},
+				{
+					"name" : "buttons_export",
+					"strict" : false
+				},
+				{
+					"name" : "player_2_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "player_1_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "player_2_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "player_1_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "player_1_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "player_2_export[2]",
 					"strict" : false
 				},
 				{

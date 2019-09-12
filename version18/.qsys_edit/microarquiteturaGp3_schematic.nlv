@@ -3,27 +3,23 @@
 preplace inst microarquiteturaGp3.clk_0 -pg 1 -lvl 1 -y 360
 preplace inst microarquiteturaGp3.jtag_uart_0 -pg 1 -lvl 3 -y 370
 preplace inst microarquiteturaGp3.nios2_qsys_0.reset_bridge -pg 1
-preplace inst microarquiteturaGp3.rs232_0 -pg 1 -lvl 3 -y 570
+preplace inst microarquiteturaGp3.vga_monitor_0 -pg 1 -lvl 2 -y 190
 preplace inst microarquiteturaGp3.nios2_qsys_0 -pg 1 -lvl 2 -y 340
-preplace inst microarquiteturaGp3.leds_columns -pg 1 -lvl 3 -y 130
 preplace inst microarquiteturaGp3.nios2_qsys_0.clock_bridge -pg 1
 preplace inst microarquiteturaGp3.onchip_memory2_0 -pg 1 -lvl 3 -y 230
 preplace inst microarquiteturaGp3.nios2_qsys_0.cpu -pg 1
-preplace inst microarquiteturaGp3.LCD_Custom_instruction_0 -pg 1 -lvl 3 -y 310
 preplace inst microarquiteturaGp3.buttons -pg 1 -lvl 3 -y 30
-preplace inst microarquiteturaGp3.leds_rows -pg 1 -lvl 3 -y 470
+preplace inst microarquiteturaGp3.LCD_Custom_instruction_0 -pg 1 -lvl 3 -y 310
 preplace inst microarquiteturaGp3 -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)microarquiteturaGp3.columns,(SLAVE)leds_columns.external_connection) 1 0 3 NJ 160 NJ 160 NJ
-preplace netloc INTERCONNECT<net_container>microarquiteturaGp3</net_container>(SLAVE)rs232_0.avalon_rs232_slave,(SLAVE)onchip_memory2_0.s1,(SLAVE)leds_rows.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)buttons.s1,(SLAVE)leds_columns.s1,(MASTER)nios2_qsys_0.data_master,(MASTER)nios2_qsys_0.instruction_master,(SLAVE)nios2_qsys_0.debug_mem_slave) 1 1 2 310 480 730
-preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)microarquiteturaGp3.buttons,(SLAVE)buttons.external_connection) 1 0 3 NJ 60 NJ 60 NJ
-preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)LCD_Custom_instruction_0.conduit_end,(SLAVE)microarquiteturaGp3.lcd) 1 0 3 NJ 260 NJ 260 NJ
-preplace netloc FAN_OUT<net_container>microarquiteturaGp3</net_container>(SLAVE)buttons.clk,(MASTER)clk_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)leds_columns.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)nios2_qsys_0.clk,(SLAVE)leds_rows.clk) 1 1 2 270 280 710
-preplace netloc FAN_OUT<net_container>microarquiteturaGp3</net_container>(MASTER)nios2_qsys_0.irq,(SLAVE)rs232_0.interrupt,(SLAVE)jtag_uart_0.irq) 1 2 1 750
-preplace netloc INTERCONNECT<net_container>microarquiteturaGp3</net_container>(SLAVE)jtag_uart_0.reset,(MASTER)nios2_qsys_0.debug_reset_request,(SLAVE)leds_columns.reset,(SLAVE)buttons.reset,(SLAVE)leds_rows.reset,(SLAVE)nios2_qsys_0.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset) 1 1 2 290 300 690
+preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)microarquiteturaGp3.lcd,(SLAVE)LCD_Custom_instruction_0.conduit_end) 1 0 3 NJ 180 NJ 180 NJ
+preplace netloc POINT_TO_POINT<net_container>microarquiteturaGp3</net_container>(SLAVE)LCD_Custom_instruction_0.nios_custom_instruction_slave,(MASTER)nios2_qsys_0.custom_instruction_master) 1 2 1 750
+preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)microarquiteturaGp3.vga_monitor,(SLAVE)vga_monitor_0.conduit_end) 1 0 2 NJ 220 NJ
 preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)microarquiteturaGp3.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)buttons.external_connection,(SLAVE)microarquiteturaGp3.buttons) 1 0 3 NJ 60 NJ 60 NJ
 preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)clk_0.clk_in,(SLAVE)microarquiteturaGp3.clk) 1 0 1 NJ
-preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)microarquiteturaGp3.rows,(SLAVE)leds_rows.external_connection) 1 0 3 NJ 500 NJ 500 NJ
-preplace netloc EXPORT<net_container>microarquiteturaGp3</net_container>(SLAVE)rs232_0.external_interface,(SLAVE)microarquiteturaGp3.uart) 1 0 3 NJ 620 NJ 620 NJ
-preplace netloc POINT_TO_POINT<net_container>microarquiteturaGp3</net_container>(MASTER)nios2_qsys_0.custom_instruction_master,(SLAVE)LCD_Custom_instruction_0.nios_custom_instruction_slave) 1 2 1 670
-levelinfo -pg 1 0 60 1020
-levelinfo -hier microarquiteturaGp3 70 100 430 800 1010
+preplace netloc INTERCONNECT<net_container>microarquiteturaGp3</net_container>(MASTER)nios2_qsys_0.instruction_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)nios2_qsys_0.debug_mem_slave,(SLAVE)buttons.s1,(SLAVE)onchip_memory2_0.s1,(MASTER)nios2_qsys_0.data_master) 1 1 2 330 300 730
+preplace netloc FAN_OUT<net_container>microarquiteturaGp3</net_container>(SLAVE)nios2_qsys_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)vga_monitor_0.clock,(SLAVE)buttons.clk,(MASTER)clk_0.clk) 1 1 2 290 260 690
+preplace netloc POINT_TO_POINT<net_container>microarquiteturaGp3</net_container>(MASTER)nios2_qsys_0.irq,(SLAVE)jtag_uart_0.irq) 1 2 1 750
+preplace netloc INTERCONNECT<net_container>microarquiteturaGp3</net_container>(SLAVE)nios2_qsys_0.reset,(SLAVE)buttons.reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset,(SLAVE)jtag_uart_0.reset,(MASTER)nios2_qsys_0.debug_reset_request) 1 1 2 310 280 710
+levelinfo -pg 1 0 80 1040
+levelinfo -hier microarquiteturaGp3 90 120 450 820 1030

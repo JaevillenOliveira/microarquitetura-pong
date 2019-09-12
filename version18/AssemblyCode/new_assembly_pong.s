@@ -37,6 +37,8 @@
 _start:
 	addi r14, r0, 1
     movia r6, 0x3030 # endereço de memórios dos botões
+    movia r4, 0x2030
+    movia r5, 0x2020
 	
 init_lcd:
 	movia r3, 0x30
@@ -59,11 +61,6 @@ init_lcd:
 	movia r3, 0x01
 	custom 0, r2, r0, r3
 
-prepare_scenario:
-    movi r3, 0
-    call move_left_bar
-    call move_right_bar
-
 start_game:
     nextpc r8 # pega o endereço da próxima instrução (para execução de um loop para observação dos botões)
     addi r10, r0, 0
@@ -75,8 +72,8 @@ start_game:
 
     movia r3, clear 
 	custom 0, r2, r0, r3 # Limpa o display
-    mov r4, r0
-    mov r5, r0
+  #  mov r4, r0
+  #  mov r5, r0
     
     # movi r3, 0x80 # Move o cursor para a posição 0 
     call write_player
@@ -136,20 +133,36 @@ player_x:
     ret
 
 updateScore_p1:
+    subi sp, sp,4
+    stw ra, 0(sp)
+
     movi r3, 0x89 
     custom 0, r2, r0, r3 # Move o cursor para a posição 11 (0B)
-    mov r7, r4
+    ldbuio r7, 0(r4)
     call converse_number
     custom 0, r2, r14, r3 # Escreve o novo placar
-    br game
+    movi r3, 5
+    beq r7, r3, player1_won
+
+    ldw ra, 0(sp)
+    addi sp, sp, 4
+    ret
     
 updateScore_p2:
+    subi sp, sp,4
+    stw ra, 0(sp)
+
     movi r3, 0xC9 
     custom 0, r2, r0, r3 # Move o cursor para a posição 51 (4B)
-    mov r7, r5
+    ldbuio r7, 0(r5)
     call converse_number
     custom 0, r2, r14, r3 # Escreve o novo placar
-    br game
+    movi r3, 5
+    beq r7, r3, player2_won
+
+    ldw ra, 0(sp)
+    addi sp, sp, 4  
+    ret
 
 converse_number:
     beq r7, r0, lcd_hex0
@@ -189,17 +202,17 @@ delay:
 	ble r10, r11, delay
 	ret
 
-goal_player1:
-    addi r4, r4, 1
-    movi r3, 5
-    beq r4, r3, player1_won
-    br updateScore_p1
+# goal_player1:
+#     addi r4, r4, 1
+#     movi r3, 5
+#     beq r4, r3, player1_won
+#     br updateScore_p1
     
-goal_player2:
-    addi r5, r5, 1
-    movi r3, 5
-    beq r5, r3, player2_won
-    br updateScore_p2
+# goal_player2:
+#     addi r5, r5, 1
+#     movi r3, 5
+#     beq r5, r3, player2_won
+#     br updateScore_p2
 
 player1_won:
     movia r3, clear # Limpa o display
@@ -226,31 +239,20 @@ game:
 	addi r10, r0, 0
 	movia r11, 400000
 	call delay #chama label delay 
+
+    call updateScore_p1
+    call updateScore_p2
+
+    br game
 	
-	ldbuio r3, 0(r6) # carrega a situação dos botões
-	addi r7, r0, 2
-	beq r3, r7, goal_player1 # se o valor dos botões for igual a 2 
+	# ldbuio r3, 0(r6) # carrega a situação dos botões
+	# addi r7, r0, 2
+	# beq r3, r7, goal_player1 # se o valor dos botões for igual a 2 
 
-	addi r7, r0, 4
-	beq r3, r7, goal_player2 # se o valor dos botões for igual a 4 
+	# addi r7, r0, 4
+	# beq r3, r7, goal_player2 # se o valor dos botões for igual a 4 
 	
-    callr r8 # desvia a execução para o endereço armazenado no registrador, neste caso 'addi r10, r0, 0'
-    
-move_left_bar:
-    movia r7, left_bar
-    stbio r3, 0(r7)
-
-move_right_bar:
-    movia r7, right_bar
-    stbio r3, 0(r7)
-
-move_ball_x:
-    movia r7, ball_x
-    stbio r3, 0(r7)
-
-move_ball_y:
-    movia r7, ball_y
-    stbio r3, 0(r7)
+ #    callr r8 # desvia a execução para o endereço armazenado no registrador, neste caso 'addi r10, r0, 0'
 
 
 

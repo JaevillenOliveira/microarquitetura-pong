@@ -26,6 +26,10 @@ Progress: Adding nios2_qsys_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_qsys_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
+Progress: Adding player_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module player_1
+Progress: Adding player_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module player_2
 Progress: Adding vga_monitor_0 [vga_monitor 1.0]
 Progress: Parameterizing module vga_monitor_0
 Progress: Building connections
@@ -34,6 +38,8 @@ Progress: Validating
 Progress: Done reading input file
 Info: microarquiteturaGp3.buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: microarquiteturaGp3.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: microarquiteturaGp3.player_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: microarquiteturaGp3.player_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
@@ -65,6 +71,10 @@ Progress: Adding nios2_qsys_0 [altera_nios2_gen2 18.1]
 Progress: Parameterizing module nios2_qsys_0
 Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
 Progress: Parameterizing module onchip_memory2_0
+Progress: Adding player_1 [altera_avalon_pio 18.1]
+Progress: Parameterizing module player_1
+Progress: Adding player_2 [altera_avalon_pio 18.1]
+Progress: Parameterizing module player_2
 Progress: Adding vga_monitor_0 [vga_monitor 1.0]
 Progress: Parameterizing module vga_monitor_0
 Progress: Building connections
@@ -73,23 +83,29 @@ Progress: Validating
 Progress: Done reading input file
 Info: microarquiteturaGp3.buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: microarquiteturaGp3.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: microarquiteturaGp3.player_1: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: microarquiteturaGp3.player_2: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
 Info: microarquiteturaGp3: Generating microarquiteturaGp3 "microarquiteturaGp3" for QUARTUS_SYNTH
 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
 Warning: microarquiteturaGp3: "No matching role found for nios2_qsys_0_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
 Info: LCD_Custom_instruction_0: "microarquiteturaGp3" instantiated LCD_Custom_instruction "LCD_Custom_instruction_0"
 Info: buttons: Starting RTL generation for module 'microarquiteturaGp3_buttons'
-Info: buttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=microarquiteturaGp3_buttons --dir=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0165_buttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0165_buttons_gen//microarquiteturaGp3_buttons_component_configuration.pl  --do_build_sim=0  ]
+Info: buttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=microarquiteturaGp3_buttons --dir=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0389_buttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0389_buttons_gen//microarquiteturaGp3_buttons_component_configuration.pl  --do_build_sim=0  ]
 Info: buttons: Done RTL generation for module 'microarquiteturaGp3_buttons'
 Info: buttons: "microarquiteturaGp3" instantiated altera_avalon_pio "buttons"
 Info: jtag_uart_0: Starting RTL generation for module 'microarquiteturaGp3_jtag_uart_0'
-Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=microarquiteturaGp3_jtag_uart_0 --dir=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0166_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0166_jtag_uart_0_gen//microarquiteturaGp3_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=microarquiteturaGp3_jtag_uart_0 --dir=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0390_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0390_jtag_uart_0_gen//microarquiteturaGp3_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
 Info: jtag_uart_0: Done RTL generation for module 'microarquiteturaGp3_jtag_uart_0'
 Info: jtag_uart_0: "microarquiteturaGp3" instantiated altera_avalon_jtag_uart "jtag_uart_0"
 Info: nios2_qsys_0: "microarquiteturaGp3" instantiated altera_nios2_gen2 "nios2_qsys_0"
 Info: onchip_memory2_0: Starting RTL generation for module 'microarquiteturaGp3_onchip_memory2_0'
-Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=microarquiteturaGp3_onchip_memory2_0 --dir=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0167_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0167_onchip_memory2_0_gen//microarquiteturaGp3_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=microarquiteturaGp3_onchip_memory2_0 --dir=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0391_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0391_onchip_memory2_0_gen//microarquiteturaGp3_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
 Info: onchip_memory2_0: Done RTL generation for module 'microarquiteturaGp3_onchip_memory2_0'
 Info: onchip_memory2_0: "microarquiteturaGp3" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: player_1: Starting RTL generation for module 'microarquiteturaGp3_player_1'
+Info: player_1:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=microarquiteturaGp3_player_1 --dir=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0392_player_1_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0392_player_1_gen//microarquiteturaGp3_player_1_component_configuration.pl  --do_build_sim=0  ]
+Info: player_1: Done RTL generation for module 'microarquiteturaGp3_player_1'
+Info: player_1: "microarquiteturaGp3" instantiated altera_avalon_pio "player_1"
 Info: vga_monitor_0: "microarquiteturaGp3" instantiated vga_monitor "vga_monitor_0"
 Info: nios2_qsys_0_custom_instruction_master_translator: "microarquiteturaGp3" instantiated altera_customins_master_translator "nios2_qsys_0_custom_instruction_master_translator"
 Info: nios2_qsys_0_custom_instruction_master_multi_xconnect: "microarquiteturaGp3" instantiated altera_customins_xconnect "nios2_qsys_0_custom_instruction_master_multi_xconnect"
@@ -98,23 +114,25 @@ Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "microarquiteturaGp3" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "microarquiteturaGp3" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "microarquiteturaGp3" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'microarquiteturaGp3_nios2_qsys_0_cpu'
-Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=microarquiteturaGp3_nios2_qsys_0_cpu --dir=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0174_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8144_2944409373659698587.dir/0174_cpu_gen//microarquiteturaGp3_nios2_qsys_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2019.09.05 17:22:11 (*) Starting Nios II generation
-Info: cpu: # 2019.09.05 17:22:11 (*)   Checking for plaintext license.
-Info: cpu: # 2019.09.05 17:22:13 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2019.09.05 17:22:13 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2019.09.05 17:22:13 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2019.09.05 17:22:13 (*)   Plaintext license not found.
-Info: cpu: # 2019.09.05 17:22:13 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2019.09.05 17:22:13 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2019.09.05 17:22:13 (*)   Creating all objects for CPU
-Info: cpu: # 2019.09.05 17:22:17 (*)   Generating RTL from CPU objects
-Info: cpu: # 2019.09.05 17:22:17 (*)   Creating plain-text RTL
-Info: cpu: # 2019.09.05 17:22:20 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=microarquiteturaGp3_nios2_qsys_0_cpu --dir=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0399_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/carlo/AppData/Local/Temp/alt8150_5128359051824647273.dir/0399_cpu_gen//microarquiteturaGp3_nios2_qsys_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2019.09.11 16:37:51 (*) Starting Nios II generation
+Info: cpu: # 2019.09.11 16:37:51 (*)   Checking for plaintext license.
+Info: cpu: # 2019.09.11 16:37:53 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2019.09.11 16:37:53 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2019.09.11 16:37:53 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2019.09.11 16:37:53 (*)   Plaintext license not found.
+Info: cpu: # 2019.09.11 16:37:53 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2019.09.11 16:37:53 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2019.09.11 16:37:53 (*)   Creating all objects for CPU
+Info: cpu: # 2019.09.11 16:37:56 (*)   Generating RTL from CPU objects
+Info: cpu: # 2019.09.11 16:37:56 (*)   Creating plain-text RTL
+Info: cpu: # 2019.09.11 16:37:58 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'microarquiteturaGp3_nios2_qsys_0_cpu'
 Info: cpu: "nios2_qsys_0" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_qsys_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_qsys_0_data_master_translator"
@@ -131,6 +149,6 @@ Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_m
 Info: Reusing file C:/Users/carlo/OneDrive/Área de Trabalho/microarquitetura-pong-master/version18/microarquiteturaGp3/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: microarquiteturaGp3: Done "microarquiteturaGp3" with 27 modules, 40 files
+Info: microarquiteturaGp3: Done "microarquiteturaGp3" with 28 modules, 41 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

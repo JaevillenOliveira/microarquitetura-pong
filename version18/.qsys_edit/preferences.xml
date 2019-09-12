@@ -15,9 +15,9 @@
    <frequency preferredWidth="256" />
   </columns>
  </clocktable>
- <library expandedCategories="Library,Project" />
- <window width="1100" height="728" x="266" y="0" />
+ <library
+   expandedCategories="Library/Interface Protocols/Serial,Library/University Program/Communications,Project,Library/University Program,Library,Library/Interface Protocols" />
+ <window width="1100" height="728" x="104" y="0" />
  <hdlexample language="VERILOG" />
- <generation
-   path="C:/Users/carlo/OneDrive/&#193;rea de Trabalho/microarquitetura-pong-master/vers&#227;o 18" />
+ <generation path="" />
 </preferences>
