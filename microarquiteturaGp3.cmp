@@ -1,0 +1,27 @@
+	component microarquiteturaGp3 is
+		port (
+			buttons_export      : in  std_logic                    := 'X';             -- export
+			clk_clk             : in  std_logic                    := 'X';             -- clk
+			lcd_read_write      : out std_logic;                                       -- read_write
+			lcd_register_select : out std_logic;                                       -- register_select
+			lcd_enable_op       : out std_logic;                                       -- enable_op
+			lcd_data_out        : out std_logic_vector(7 downto 0);                    -- data_out
+			player_1_export     : in  std_logic_vector(2 downto 0) := (others => 'X'); -- export
+			player_2_export     : in  std_logic_vector(2 downto 0) := (others => 'X'); -- export
+			reset_reset_n       : in  std_logic                    := 'X';             -- reset_n
+			vga_hsync           : out std_logic;                                       -- hsync
+			vga_vsync           : out std_logic;                                       -- vsync
+			vga_r               : out std_logic_vector(3 downto 0);                    -- r
+			vga_g               : out std_logic_vector(3 downto 0);                    -- g
+			vga_b               : out std_logic_vector(3 downto 0);                    -- b
+			vga_button_game     : in  std_logic                    := 'X';             -- button_game
+			vga_score_p1        : out std_logic_vector(2 downto 0);                    -- score_p1
+			vga_score_p2        : out std_logic_vector(2 downto 0);                    -- score_p2
+			vga_up_left         : in  std_logic                    := 'X';             -- up_left
+			vga_up_right        : in  std_logic                    := 'X';             -- up_right
+			vga_down_left       : in  std_logic                    := 'X';             -- down_left
+			vga_down_right      : in  std_logic                    := 'X';             -- down_right
+			vga_rst_lcd         : out std_logic                                        -- rst_lcd
+		);
+	end component microarquiteturaGp3;
+
