@@ -14,11 +14,6 @@
 .equ clear, 0x01
 .equ space, 0x20
 
-.equ ball_x, 0x2070
-.equ ball_y, 0x2060
-.equ left_bar, 0x2050
-.equ right_bar, 0x2040
-
 .text
 
 # r2 guarda recebe os resultados da intrução customizada do lcd
@@ -61,14 +56,10 @@ init_lcd:
 	custom 0, r2, r0, r3
 
 start_game:
-    # nextpc r8 # pega o endereço da próxima instrução (para execução de um loop para observação dos botões)
     addi r10, r0, 0
     movia r11, 400000
     call delay #chama label delay 
     
-    # ldbuio r3, 0(r6) # carrega a situação dos botões
-    # bne r3, r14, start_game # se o valor dos botões não for igual a 1
-
     movia r3, clear 
 	custom 0, r2, r0, r3 # Limpa o display
 

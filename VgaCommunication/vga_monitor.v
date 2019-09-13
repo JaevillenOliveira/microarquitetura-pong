@@ -218,8 +218,7 @@ always @(posedge Clock) begin
                                 x_dir <= 1;  // change direction to right
                             else 
                                 begin
-                                    score_p2 <= score_p2 + 3'b001; //Marcar ponto pro jg 2
-                                    //Reset
+                                    score_p2 <= score_p2 + 3'b001;
                                     x_dir <= 1;
                                     bola_x <= IX;
                                     bola_y <= IY;
@@ -231,8 +230,6 @@ always @(posedge Clock) begin
                                 x_dir <= 0;  // change direction to left
                             else 
                                 begin
-                                    //marcar ponto pro jg 1
-                                    //reset
                                     x_dir <= 0;
                                     score_p1 <= score_p1 + 3'b001;
                                     bola_x <= IX;
